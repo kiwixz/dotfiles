@@ -82,6 +82,7 @@ alias -g QQ='>/dev/null 2>/dev/null'
 alias diff="diff --color=auto"
 alias grep="grep --color=auto"
 alias ls="ls --color=auto"
+alias pacman="pacman --color=auto"
 alias sudo="sudo "
 
 alias dockrun="docker run -it --rm"
