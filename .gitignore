@@ -1,8 +1,20 @@
-*
+/*
 
-!.gitignore
-!aur
+!/.gitignore
+!/aur
 
-!.config/i3
-!.config/termite
-!.config/polybar
+
+!/.config
+/.config/*
+
+!/.config/i3
+!/.config/termite
+!/.config/polybar
+
+
+!/.config/Code - OSS
+/.config/Code - OSS/*
+!/.config/Code - OSS/User
+/.config/Code - OSS/User/*
+
+!/.config/Code - OSS/User/settings.json
