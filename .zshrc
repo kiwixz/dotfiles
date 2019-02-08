@@ -87,6 +87,7 @@ alias sudo="sudo "
 
 alias dockrun="docker run -it --rm"
 alias gitlog="git log --all --decorate=short --oneline --graph"
+alias ytdl='youtube-dl -f "bestvideo[height<=1440]+bestaudio" --all-subs --convert-subs "srt" --embed-subs --sub-format "srt"'
 
 
 gitbull() {
