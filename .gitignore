@@ -1,7 +1,11 @@
 /*
 
+!/.xinitrc
 !/.gitignore
-!/aur
+!/.gitprofile
+!/.zshrc
+!/.zprofile
+!/aur.sh
 
 
 !/.config
