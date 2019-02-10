@@ -71,7 +71,6 @@ export LESS_TERMCAP_ue=$'\e[0m'
 
 export CLICOLOR_FORCE="1"
 export CXXFLAGS="-fdiagnostics-color=always"
-export MAKEFLAGS="-j$(nproc) -Otarget"
 export PATH="$CCACHE_BIN_DIR:$PATH"
 
 
@@ -84,6 +83,9 @@ alias grep="grep --color=auto"
 alias ls="ls --color=auto"
 alias pacman="pacman --color=auto"
 alias sudo="sudo "
+
+alias cmake="cmake -G Ninja"
+alias make="make -j $(nproc) -O"
 
 alias dockrun="docker run -it --rm"
 alias gitlog="git log --all --decorate=short --oneline --graph"
