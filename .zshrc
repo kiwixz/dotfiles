@@ -20,6 +20,8 @@ promptinit
 
 bindkey "^[[5~" history-beginning-search-backward
 bindkey "^[[6~" history-beginning-search-forward
+bindkey "^[[1;5C" forward-word
+bindkey "^[[1;5D" backward-word
 bindkey "$terminfo[kdch1]" delete-char
 bindkey "$terminfo[kend]" end-of-line
 bindkey "$terminfo[khome]" beginning-of-line
@@ -80,13 +82,14 @@ alias -g QQ='>/dev/null 2>/dev/null'
 
 alias diff="diff --color=auto"
 alias grep="grep --color=auto"
-alias ls="ls --color=auto"
+alias ls="ls --color=auto --group-directories-first"
 alias pacman="pacman --color=auto"
 alias sudo="sudo "
 
 alias cmake="cmake -G Ninja"
 alias make="make -j $(nproc) -O"
 
+alias cninja='CXXFLAGS="$CXXFLAGS -fuse-ld=lld" cmake .. && ninja'
 alias dockrun="docker run -it --rm"
 alias gitlog="git log --all --decorate=short --oneline --graph"
 alias ytdl='youtube-dl -f "bestvideo[height<=1440]+bestaudio" --all-subs --convert-subs "srt" --embed-subs --sub-format "srt"'
