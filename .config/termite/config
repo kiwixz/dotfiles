@@ -1,5 +1,7 @@
 [options]
 font = Roboto Mono 11
+scrollback_lines = 8192
+scrollbar = on
 
 [colors]
 background = #111
