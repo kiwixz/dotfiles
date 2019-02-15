@@ -73,6 +73,7 @@ export LESS_TERMCAP_ue=$'\e[0m'
 
 export CLICOLOR_FORCE="1"
 export CXXFLAGS="-fdiagnostics-color=always"
+export LDFLAGS="-fdiagnostics-color=always"
 export PATH="$CCACHE_BIN_DIR:$PATH"
 
 
@@ -89,7 +90,7 @@ alias sudo="sudo "
 alias cmake="cmake -G Ninja"
 alias make="make -j $(nproc) -O"
 
-alias cninja='CXXFLAGS="$CXXFLAGS -fuse-ld=lld" cmake .. && ninja'
+alias cninja='LDFLAGS="$LDFLAGS -fuse-ld=lld" cmake .. && ninja'
 alias dockrun="docker run -it --rm"
 alias gitlog="git log --all --decorate=short --oneline --graph"
 alias ytdl='youtube-dl -f "bestvideo[height<=1440]+bestaudio" --all-subs --convert-subs "srt" --embed-subs --sub-format "srt"'
