@@ -1,7 +1,9 @@
 [core]
-	autocrlf = input
-	editor = nano
+    autocrlf = input
+    editor = nano
 [fetch]
-	prune = true
+    prune = true
+[merge]
+    ff = false
 [mergetool]
-	keepBackup = false
+    keepBackup = false
