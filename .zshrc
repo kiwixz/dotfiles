@@ -93,7 +93,6 @@ alias make="make -j $(nproc) -O"
 
 alias cninja='LDFLAGS="$LDFLAGS -fuse-ld=lld" cmake .. && ninja'
 alias dockrun="docker run -it --rm"
-alias gitlog="git log --all --decorate=short --oneline --graph"
 alias ytdl='youtube-dl -f "bestvideo[height<=1440]+bestaudio" --all-subs --convert-subs "srt" --embed-subs --sub-format "srt"'
 
 

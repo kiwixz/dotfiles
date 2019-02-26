@@ -1,3 +1,5 @@
+[alias]
+    pog = log --all --oneline --graph --decorate=short
 [core]
     autocrlf = input
     editor = nano
