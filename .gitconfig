@@ -1,11 +1,10 @@
 [alias]
+    cerge = merge --no-ff
     pog = log --all --oneline --graph --decorate=short
 [core]
     autocrlf = input
     editor = nano
 [fetch]
     prune = true
-[merge]
-    ff = false
 [mergetool]
     keepBackup = false
