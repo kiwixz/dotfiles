@@ -113,3 +113,5 @@ title() {
 if [[ -f "$PLUGIN_SYNTAX_HIGHLIGHTING" ]]; then
     source "$PLUGIN_SYNTAX_HIGHLIGHTING"
 fi
+
+title "$USERNAME@$HOST"
