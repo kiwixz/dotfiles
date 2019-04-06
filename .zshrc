@@ -88,7 +88,7 @@ alias pacman="pacman --color=auto"
 alias sudo="sudo "
 
 alias cmake="cmake -G Ninja"
-alias ctest="ctest --output-on-fail"
+alias ctest="ctest --output-on-failure"
 alias make="make -j $(nproc) -O"
 
 alias cninja='LDFLAGS="$LDFLAGS -fuse-ld=lld" cmake .. && ninja'
