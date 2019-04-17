@@ -58,7 +58,7 @@ PS1_EC='%B%(?.%2F0.%1F%?)%b'
 PS1_JOBS='%(2j. %3F(%j jobs).%(1j. %3F(1 job).))'
 PS1_ID=' %6F%n@%M'
 PS1_PATH=' %6F%~'
-PS1_END='%1F%(!.#.$)'
+PS1_END='%$(($COLUMNS * 2 / 3))(l.'$'\n''.)%1F%(!.#.$)'
 export PS1="${PS1_SB}[$PS1_EC$PS1_JOBS$PS1_ID$PS1_PATH$PS1_GIT${PS1_SB}]$PS1_END%f "
 
 
