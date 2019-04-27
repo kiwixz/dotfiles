@@ -18,20 +18,24 @@ autoload -Uz compinit promptinit
 compinit
 promptinit
 
-bindkey "^[[5~" history-beginning-search-backward
-bindkey "^[[6~" history-beginning-search-forward
-bindkey "^[[1;5C" forward-word
-bindkey "^[[1;5D" backward-word
+bindkey "\e[1~" beginning-of-line  # for ssh from Windows
+bindkey "\e[4~" end-of-line        #
+bindkey "\e[1;5C" forward-word
+bindkey "\e[1;5D" backward-word
+bindkey "$terminfo[kcbt]" reverse-menu-complete
 bindkey "$terminfo[kdch1]" delete-char
 bindkey "$terminfo[kend]" end-of-line
 bindkey "$terminfo[khome]" beginning-of-line
-if [[ ${+terminfo[smkx]} ]] && [[ ${+terminfo[rmkx]} ]]
+bindkey "$terminfo[knp]" history-beginning-search-forward
+bindkey "$terminfo[kpp]" history-beginning-search-backward
+
+if (( ${+terminfo[smkx]} && ${+terminfo[rmkx]} ))
 then
     function zle-line-init () {
-        printf "${terminfo[smkx]}"
+        echoti smkx
     }
     function zle-line-finish () {
-        printf "${terminfo[rmkx]}"
+        echoti rmkx
     }
     zle -N zle-line-init
     zle -N zle-line-finish
