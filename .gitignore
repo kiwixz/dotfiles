@@ -12,7 +12,7 @@
 /.config/*
 
 !/.config/i3
-!/.config/termite
+!/.config/alacritty
 !/.config/polybar
 
 
