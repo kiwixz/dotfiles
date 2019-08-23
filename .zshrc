@@ -95,7 +95,6 @@ alias cmake="cmake -G Ninja"
 alias ctest="ctest --output-on-failure"
 alias make="make -j $(nproc) -O"
 
-alias cninja="cmake .. && ninja"
 alias dockrun="docker run -it --rm"
 alias ytdl='youtube-dl -f "bestvideo[height<=1440]+bestaudio" --all-subs --convert-subs "srt" --embed-subs --sub-format "srt"'
 
