@@ -1,3 +1,5 @@
+[advice]
+    detachedHead = false
 [alias]
     cerge = merge --no-ff
     pog = log --all --oneline --graph --decorate=short
