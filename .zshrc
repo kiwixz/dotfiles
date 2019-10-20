@@ -76,10 +76,12 @@ export LESS_TERMCAP_se=$'\e[0m'
 export LESS_TERMCAP_us=$'\e[1;32m'
 export LESS_TERMCAP_ue=$'\e[0m'
 
+export ASAN_OPTIONS="check_initialization_order=1:detect_stack_use_after_return=1"
 export CLICOLOR_FORCE="1"
 export CXXFLAGS="-fdiagnostics-color=always"
 export LDFLAGS="-fdiagnostics-color=always"
 export PATH="$CCACHE_BIN_DIR:$PATH"
+export UBSAN_OPTIONS="print_stacktrace=1"
 
 
 alias -g Q='>/dev/null'
