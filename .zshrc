@@ -14,7 +14,8 @@ fi
 setopt CORRECT GLOB_DOTS HIST_IGNORE_DUPS HIST_REDUCE_BLANKS NUMERIC_GLOB_SORT PROMPT_SUBST
 unsetopt FLOW_CONTROL MENU_COMPLETE
 
-autoload -Uz compinit promptinit
+autoload -Uz bashcompinit compinit promptinit
+bashcompinit
 compinit
 promptinit
 
