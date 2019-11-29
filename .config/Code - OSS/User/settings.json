@@ -5,7 +5,7 @@
 
     "breadcrumbs.enabled": true,
     "editor.cursorStyle": "line-thin",
-    "editor.fontFamily": "Consolas, Roboto Mono, monospace",
+    "editor.fontFamily": "Consolas, monospace",
     "editor.renderWhitespace": "boundary",
     "files.eol": "\n",
     "latex-workshop.latex.autoBuild.onTexChange.enabled": true,
