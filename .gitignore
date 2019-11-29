@@ -5,15 +5,13 @@
 !/.gitprofile
 !/.zshrc
 !/.zprofile
-!/aur.sh
+!/aur
 
 
 !/.config
 /.config/*
 
-!/.config/i3
 !/.config/alacritty
-!/.config/polybar
 
 
 !/.config/Code - OSS
