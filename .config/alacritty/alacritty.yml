@@ -8,10 +8,6 @@ scrolling:
 
 tabspaces: 8
 
-font:
-  normal:
-    family: 'Consolas'
-
 colors:
   primary:
     background: '0x000000'
