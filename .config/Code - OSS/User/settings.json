@@ -8,10 +8,11 @@
     "editor.fontFamily": "Consolas, monospace",
     "editor.renderWhitespace": "boundary",
     "files.eol": "\n",
+    "window.openFilesInNewWindow": "default",
+    "workbench.startupEditor": "newUntitledFile",
+
+    "C_Cpp.clang_format_path": "/usr/bin/clang-format",
     "latex-workshop.latex.autoBuild.onTexChange.enabled": true,
     "latex-workshop.view.pdf.viewer": "tab",
     "python.formatting.autopep8Args": ["--max-line-length=200"],
-    "window.openFilesInNewWindow": "default",
-    "workbench.startupEditor": "newUntitledFile",
-    "workbench.statusBar.feedback.visible": false
 }
