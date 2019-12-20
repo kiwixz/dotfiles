@@ -64,7 +64,7 @@ PS1_EC='%B%(?.%2F0.%1F%?)%b'
 PS1_JOBS='%(2j. %3F(%j jobs).%(1j. %3F(1 job).))'
 PS1_ID='%6F%n@%M'
 PS1_PATH='%6F%~'
-PS1_END='%($(($COLUMNS * 2 / 3))l.'$'\n''.)%1F%(!.#.$)'
+PS1_END='%($(($COLUMNS - 40))l.'$'\n''.)%1F%(!.#.$)'
 PS1="${PS1_SB}[$PS1_LVL$PS1_EC$PS1_JOBS $PS1_ID $PS1_PATH$PS1_GIT${PS1_SB}]$PS1_END%f "
 
 
@@ -81,7 +81,8 @@ export ASAN_OPTIONS="check_initialization_order=1:detect_stack_use_after_return=
 export CLICOLOR_FORCE="1"
 export CXXFLAGS="-fdiagnostics-color=always"
 export LDFLAGS="-fdiagnostics-color=always"
-export PATH="$CCACHE_BIN_DIR:$PATH"
+export PATH="$HOME/bin:$CCACHE_BIN_DIR:$PATH"
+export PYTHONFAULTHANDLER="1"
 export UBSAN_OPTIONS="print_stacktrace=1"
 
 
@@ -100,6 +101,7 @@ alias ctest="ctest --output-on-failure"
 alias make="make -j $(nproc) -O"
 
 alias dockrun="docker run -it --rm"
+alias gdbr='gdb -ex "set confirm on" -ex r -ex q -args'
 alias ytdl='youtube-dl -f "bestvideo[height<=1440]+bestaudio" --all-subs --convert-subs "srt" --embed-subs --sub-format "srt"'
 
 
