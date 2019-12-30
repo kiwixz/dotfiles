@@ -86,6 +86,7 @@ export PYTHONFAULTHANDLER="1"
 export UBSAN_OPTIONS="print_stacktrace=1"
 
 
+alias -g G='|grep'
 alias -g Q='>/dev/null'
 alias -g Q2='2>/dev/null'
 alias -g QQ='>/dev/null 2>/dev/null'
@@ -102,7 +103,8 @@ alias make="make -j $(nproc) -O"
 
 alias dockrun="docker run -it --rm"
 alias gdbr='gdb -ex "set confirm on" -ex r -ex q -args'
-alias ytdl='youtube-dl -f "bestvideo[height<=1440]+bestaudio" --all-subs --convert-subs "srt" --embed-subs --sub-format "srt"'
+alias lldbrq='lldb -o r -o "script lldb.frame or os._exit(0)" --'
+alias ytdl='youtube-dl -f "bestvideo+bestaudio" --all-subs --convert-subs "srt" --embed-subs --sub-format "srt"'
 
 
 gitbull() {
