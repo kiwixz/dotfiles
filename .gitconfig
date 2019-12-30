@@ -11,5 +11,7 @@
     prune = true
 [mergetool]
     keepBackup = false
+[pull]
+    rebase = interactive
 [submodule]
     recurse = true
