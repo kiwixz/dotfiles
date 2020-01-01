@@ -81,6 +81,7 @@ export ASAN_OPTIONS="check_initialization_order=1:detect_stack_use_after_return=
 export CLICOLOR_FORCE="1"
 export CXXFLAGS="-fdiagnostics-color=always"
 export LDFLAGS="-fdiagnostics-color=always"
+export MAKEFLAGS="-j $(($(nproc) + 2)) -O"
 export PATH="$HOME/bin:$CCACHE_BIN_DIR:$PATH"
 export PYTHONFAULTHANDLER="1"
 export UBSAN_OPTIONS="print_stacktrace=1"
@@ -99,7 +100,6 @@ alias sudo="sudo "
 
 alias cmake="cmake -G Ninja"
 alias ctest="ctest --output-on-failure"
-alias make="make -j $(nproc) -O"
 
 alias dockrun="docker run -it --rm"
 alias gdbr='gdb -ex "set confirm on" -ex r -ex q -args'
