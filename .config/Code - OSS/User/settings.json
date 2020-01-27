@@ -6,6 +6,7 @@
     "breadcrumbs.enabled": true,
     "editor.cursorStyle": "line-thin",
     "editor.fontFamily": "Consolas, monospace",
+    "editor.renderControlCharacters": true,
     "editor.renderWhitespace": "boundary",
     "explorer.autoReveal": false,
     "files.eol": "\n",
@@ -13,7 +14,7 @@
     "workbench.editor.enablePreview": false,
     "workbench.startupEditor": "newUntitledFile",
 
-    "clangd.arguments": ["--compile-commands-dir=build", "--suggest-missing-includes"],
+    "clangd.arguments": ["--compile-commands-dir=build"],
     "gitlens.codeLens.enabled": false,
     "gitlens.currentLine.enabled": false,
     "latex-workshop.latex.autoBuild.onTexChange.enabled": true,
