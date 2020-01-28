@@ -13,5 +13,3 @@
     keepBackup = false
 [pull]
     rebase = true
-[submodule]
-    recurse = true

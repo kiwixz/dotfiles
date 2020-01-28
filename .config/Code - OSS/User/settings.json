@@ -14,7 +14,7 @@
     "workbench.editor.enablePreview": false,
     "workbench.startupEditor": "newUntitledFile",
 
-    "clangd.arguments": ["--compile-commands-dir=build"],
+    "clangd.arguments": ["--compile-commands-dir=build", "--header-insertion=never"],
     "gitlens.codeLens.enabled": false,
     "gitlens.currentLine.enabled": false,
     "latex-workshop.latex.autoBuild.onTexChange.enabled": true,
