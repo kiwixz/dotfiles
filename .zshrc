@@ -12,37 +12,41 @@ else
 fi
 
 setopt CORRECT GLOB_DOTS HIST_IGNORE_DUPS HIST_REDUCE_BLANKS NUMERIC_GLOB_SORT PROMPT_SUBST
-unsetopt FLOW_CONTROL MENU_COMPLETE
+unsetopt FLOW_CONTROL MENU_COMPLETE NOMATCH
 
-autoload -Uz bashcompinit compinit promptinit
-bashcompinit
-compinit
-promptinit
+HISTFILE="$HOME/.zhistory"
+HISTSIZE="65536"
+SAVEHIST="$HISTSIZE"
+TIMEFMT="%J:  %U user  %S system  %E total  %P cpu  %MKB memory"
+
+autoload -Uz bashcompinit && bashcompinit
+autoload -Uz compinit && compinit
 
 bindkey "\e[1~" beginning-of-line  # for ssh from Windows
 bindkey "\e[4~" end-of-line        #
-bindkey "\e[1;5C" forward-word
-bindkey "\e[1;5D" backward-word
-bindkey "$terminfo[kcbt]" reverse-menu-complete
 bindkey "$terminfo[kdch1]" delete-char
-bindkey "$terminfo[kend]" end-of-line
+bindkey "$terminfo[kcbt]" reverse-menu-complete
+bindkey "$terminfo[kich1]" overwrite-mode
 bindkey "$terminfo[khome]" beginning-of-line
+bindkey "$terminfo[kend]" end-of-line
 bindkey "$terminfo[knp]" history-beginning-search-forward
 bindkey "$terminfo[kpp]" history-beginning-search-backward
+bindkey "\e[1;5C" forward-word
+bindkey "\e[1;5D" backward-word
+bindkey "\e[3;5~" delete-word
+bindkey "^H" backward-delete-word
 
-if (( ${+terminfo[smkx]} && ${+terminfo[rmkx]} ))
-then
-    function zle-line-init () {
-        echoti smkx
-    }
-    function zle-line-finish () {
-        echoti rmkx
-    }
+if [[ ${+terminfo[smkx]} && ${+terminfo[rmkx]} ]]; then
+    function zle-line-init () { echoti smkx }
+    function zle-line-finish () { echoti rmkx }
     zle -N zle-line-init
     zle -N zle-line-finish
 fi
 
+eval "$(dircolors)"
+
 zstyle ':completion:*' completer _complete _match _approximate
+zstyle ':completion:*' list-colors "$LS_COLORS"
 zstyle ':completion:*' menu select
 zstyle ':completion:*' use-cache true
 zstyle ':completion:*:match:*' original only
@@ -68,15 +72,6 @@ PS1_END='%($(($COLUMNS - 40))l.'$'\n''.)%1F%(!.#.$)'
 PS1="${PS1_SB}[$PS1_LVL$PS1_EC$PS1_JOBS $PS1_ID $PS1_PATH$PS1_GIT${PS1_SB}]$PS1_END%f "
 
 
-export LESS='-R'
-export LESS_TERMCAP_mb=$'\e[1;31m'
-export LESS_TERMCAP_md=$'\e[1;36m'
-export LESS_TERMCAP_me=$'\e[0m'
-export LESS_TERMCAP_so=$'\e[01;44;33m'
-export LESS_TERMCAP_se=$'\e[0m'
-export LESS_TERMCAP_us=$'\e[1;32m'
-export LESS_TERMCAP_ue=$'\e[0m'
-
 export ASAN_OPTIONS="check_initialization_order=1:detect_stack_use_after_return=1"
 export CLICOLOR_FORCE="1"
 export CXXFLAGS="-fdiagnostics-color=always"
@@ -85,6 +80,15 @@ export MAKEFLAGS="-j $(($(nproc) + 2)) -O"
 export PATH="$HOME/bin:$CCACHE_BIN_DIR:$PATH"
 export PYTHONFAULTHANDLER="1"
 export UBSAN_OPTIONS="print_stacktrace=1"
+
+export LESS="-R"
+export LESS_TERMCAP_mb=$'\e[1;31m'
+export LESS_TERMCAP_md=$'\e[1;36m'
+export LESS_TERMCAP_me=$'\e[0m'
+export LESS_TERMCAP_so=$'\e[01;44;33m'
+export LESS_TERMCAP_se=$'\e[0m'
+export LESS_TERMCAP_us=$'\e[1;32m'
+export LESS_TERMCAP_ue=$'\e[0m'
 
 
 alias -g G='|grep'
@@ -102,14 +106,10 @@ alias cmake="cmake -G Ninja"
 alias ctest="ctest --output-on-failure"
 
 alias dockrun="docker run -it --rm"
-alias gdbr='gdb -ex "set confirm on" -ex r -ex q -args'
+alias gdbrq='gdb -ex "set confirm on" -ex "r" -ex "q" -args'
 alias lldbrq='lldb -o r -o "script lldb.frame or os._exit(0)" --'
 alias ytdl='youtube-dl -f "bestvideo+bestaudio" --all-subs --convert-subs "srt" --embed-subs --sub-format "srt"'
 
-
-gitbull() {
-    git fetch origin "$1:$1" "${@:2}"
-}
 
 mkcd() {
     mkdir -p "$*"
