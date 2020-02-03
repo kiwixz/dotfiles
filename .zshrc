@@ -18,6 +18,7 @@ HISTFILE="$HOME/.zhistory"
 HISTSIZE="65536"
 SAVEHIST="$HISTSIZE"
 TIMEFMT="%J:  %U user  %S system  %E total  %P cpu  %MKB memory"
+WORDCHARS=""
 
 autoload -Uz bashcompinit && bashcompinit
 autoload -Uz compinit && compinit
