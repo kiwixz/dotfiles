@@ -3,7 +3,8 @@
     "telemetry.enableCrashReporter": false,
 
     "editor.cursorStyle": "line-thin",
-    "editor.fontFamily": "Consolas, monospace",
+    "editor.fontFamily": "Kiosevka, Consolas, monospace",
+    "editor.fontLigatures": true,
     "editor.renderControlCharacters": true,
     "editor.renderWhitespace": "boundary",
     "explorer.autoReveal": false,
