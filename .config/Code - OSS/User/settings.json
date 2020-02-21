@@ -17,7 +17,8 @@
     "gitlens.currentLine.enabled": false,
     "prettier.printWidth": 120,
     "prettier.tabWidth": 4,
-    "python.formatting.autopep8Args": ["--max-line-length=120"],
+    "python.formatting.blackArgs": ["--line-length=120"],
+    "python.formatting.provider": "black",
     "vsintellicode.modify.editor.suggestSelection": "disabled",
 
     "[json]": {
