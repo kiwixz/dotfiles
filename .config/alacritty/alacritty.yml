@@ -8,6 +8,9 @@ scrolling:
 
 tabspaces: 8
 
+font:
+  size: 12
+
 colors:
   primary:
     background: '0x000000'
