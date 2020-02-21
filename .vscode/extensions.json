@@ -1,7 +1,6 @@
 {
     "recommendations": [
         "twxs.cmake",
-        "ms-azuretools.vscode-docker",
         "eamodio.gitlens",
         "esbenp.prettier-vscode",
         "ms-python.python",
