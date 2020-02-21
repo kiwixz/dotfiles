@@ -1,5 +1,6 @@
 {
     "recommendations": [
+        "bungcip.better-toml",
         "twxs.cmake",
         "eamodio.gitlens",
         "esbenp.prettier-vscode",
