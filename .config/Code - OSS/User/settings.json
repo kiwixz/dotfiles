@@ -1,9 +1,7 @@
 {
     "telemetry.enableTelemetry": false,
     "telemetry.enableCrashReporter": false,
-    "liveshare.diagnosticLogging": false,
 
-    "breadcrumbs.enabled": true,
     "editor.cursorStyle": "line-thin",
     "editor.fontFamily": "Consolas, monospace",
     "editor.renderControlCharacters": true,
@@ -17,7 +15,15 @@
     "clangd.arguments": ["--compile-commands-dir=build", "--header-insertion=never"],
     "gitlens.codeLens.enabled": false,
     "gitlens.currentLine.enabled": false,
-    "latex-workshop.latex.autoBuild.onTexChange.enabled": true,
-    "latex-workshop.view.pdf.viewer": "tab",
-    "python.formatting.autopep8Args": ["--max-line-length=200"],
+    "prettier.printWidth": 120,
+    "prettier.tabWidth": 4,
+    "python.formatting.autopep8Args": ["--max-line-length=120"],
+    "vsintellicode.modify.editor.suggestSelection": "disabled",
+
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[jsonc]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    }
 }
