@@ -1,32 +1,32 @@
 {
-    "telemetry.enableTelemetry": false,
-    "telemetry.enableCrashReporter": false,
+  "telemetry.enableTelemetry": false,
+  "telemetry.enableCrashReporter": false,
 
-    "editor.cursorStyle": "line-thin",
-    "editor.fontFamily": "Kiosevka, Consolas, monospace",
-    "editor.fontLigatures": true,
-    "editor.renderControlCharacters": true,
-    "editor.renderWhitespace": "boundary",
-    "explorer.autoReveal": false,
-    "files.eol": "\n",
-    "window.openFilesInNewWindow": "default",
-    "workbench.editor.enablePreview": false,
-    "workbench.startupEditor": "newUntitledFile",
+  "editor.cursorStyle": "line-thin",
+  "editor.fontFamily": "Kiosevka, Consolas, monospace",
+  "editor.fontLigatures": true,
+  "editor.fontSize": 16,
+  "editor.renderControlCharacters": true,
+  "editor.renderWhitespace": "boundary",
+  "explorer.autoReveal": false,
+  "files.eol": "\n",
+  "window.openFilesInNewWindow": "default",
+  "workbench.editor.enablePreview": false,
+  "workbench.startupEditor": "newUntitledFile",
 
-    "clangd.arguments": ["--compile-commands-dir=build", "--header-insertion=never"],
-    "gitlens.codeLens.enabled": false,
-    "gitlens.currentLine.enabled": false,
-    "prettier.printWidth": 120,
-    "prettier.tabWidth": 4,
-    "python.formatting.blackArgs": ["--line-length=120"],
-    "python.formatting.provider": "black",
-    "python.jediEnabled": false,
-    "vsintellicode.modify.editor.suggestSelection": "disabled",
+  "clangd.arguments": ["--compile-commands-dir=build", "--header-insertion=never"],
+  "gitlens.codeLens.enabled": false,
+  "gitlens.currentLine.enabled": false,
+  "prettier.printWidth": 120,
+  "python.formatting.blackArgs": ["--line-length=120"],
+  "python.formatting.provider": "black",
+  "python.jediEnabled": false,
+  "vsintellicode.modify.editor.suggestSelection": "disabled",
 
-    "[json]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[jsonc]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    }
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }

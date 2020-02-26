@@ -18,13 +18,13 @@ colors:
 
   normal:
     black:   '0x000000'
-    red:     '0xaa0000'
-    green:   '0x00aa00'
-    yellow:  '0xaa7700'
-    blue:    '0x0000ee'
-    magenta: '0xaa00aa'
-    cyan:    '0x00aaaa'
-    white:   '0xaaaaaa'
+    red:     '0xdd0000'
+    green:   '0x00dd00'
+    yellow:  '0xddbb00'
+    blue:    '0x0000ff'
+    magenta: '0xdd00dd'
+    cyan:    '0x00dddd'
+    white:   '0xffffff'
 
   bright:
     black:   '0x444444'
