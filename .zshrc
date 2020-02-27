@@ -48,10 +48,11 @@ eval "$(dircolors)"
 
 zstyle ':completion:*' completer _complete _match _approximate
 zstyle ':completion:*' list-colors "$LS_COLORS"
+zstyle ':completion:*' matcher-list "" "m:{a-zA-Z}={A-Za-z}"
 zstyle ':completion:*' menu select
 zstyle ':completion:*' use-cache true
+zstyle ':completion:*:approximate:*' max-errors 3 numeric
 zstyle ':completion:*:match:*' original only
-zstyle ':completion:*:approximate:*' max-errors 'reply=($((($#PREFIX + $#SUFFIX) / 3)) numeric)'
 
 
 if [[ -f "$GIT_PROMPT" ]]; then
