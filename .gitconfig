@@ -4,6 +4,7 @@
     cerge = merge --no-ff
     bog = log --oneline --graph --decorate=short
     bull = !"f() { git fetch origin $@:$@; }; f"
+    up = !"f() { git fetch upstream $@:$@; }; f"
     pog = log --all --oneline --graph --decorate=short
 [core]
     autocrlf = input
