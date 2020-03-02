@@ -1,10 +1,13 @@
 {
     "recommendations": [
+        "deitry.apt-source-list-syntax",
         "bungcip.better-toml",
         "twxs.cmake",
         "eamodio.gitlens",
+        "wholroyd.jinja",
         "esbenp.prettier-vscode",
         "ms-python.python",
+        "coolbear.systemd-unit-file",
         "visualstudioexptteam.vscodeintellicode",
         "ms-vscode.vs-keybindings",
         "llvm-vs-code-extensions.vscode-clangd",
