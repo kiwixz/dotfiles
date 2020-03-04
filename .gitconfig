@@ -2,10 +2,10 @@
     detachedHead = false
 [alias]
     cerge = merge --no-ff
-    bog = log --oneline --graph --decorate=short
+    bog = log --graph --pretty='format:%C(auto)%h%d  %s  %C(auto,blue)(%aN, %ar)%Creset'
     bull = !"f() { git fetch origin $@:$@; }; f"
     up = !"f() { git fetch upstream $@:$@; }; f"
-    pog = log --all --oneline --graph --decorate=short
+    pog = log --graph --pretty='format:%C(auto)%h%d  %s  %C(auto,blue)(%aN, %ar)%Creset' --all
 [core]
     autocrlf = input
     editor = nano
