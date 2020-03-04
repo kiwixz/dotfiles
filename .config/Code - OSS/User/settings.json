@@ -8,6 +8,7 @@
   "editor.fontSize": 16,
   "editor.renderControlCharacters": true,
   "editor.renderWhitespace": "boundary",
+  "editor.suggestSelection": "first",
   "explorer.autoReveal": false,
   "files.eol": "\n",
   "window.openFilesInNewWindow": "default",
@@ -39,12 +40,12 @@
   "python.linting.pycodestyleArgs": ["--max-line-length=120"],
   "python.linting.pycodestyleEnabled": true,
   "python.linting.pylintArgs": ["--disable=invalid-name", "--disable=missing-docstring"],
-  "vsintellicode.modify.editor.suggestSelection": "disabled",
+  "python.linting.pylintEnabled": true,
 
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+  },
 }
