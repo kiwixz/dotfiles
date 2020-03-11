@@ -3,8 +3,8 @@
 [alias]
     cerge = merge --no-ff
     bog = log --graph --pretty='format:%C(auto)%h%d  %s  %C(auto,blue)(%aN, %ar)%Creset'
-    bull = !"f() { git fetch origin $@:$@; }; f"
-    up = !"f() { git fetch upstream $@:$@; }; f"
+    bull = !"f() { git fetch origin $1:$1; }; f"
+    up = !"f() { git fetch upstream $1:$1; git push -u origin $1; }; f"
     pog = log --graph --pretty='format:%C(auto)%h%d  %s  %C(auto,blue)(%aN, %ar)%Creset' --all
 [core]
     autocrlf = input
