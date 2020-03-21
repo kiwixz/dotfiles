@@ -76,6 +76,7 @@ PS1="${PS1_SB}[$PS1_LVL$PS1_EC$PS1_JOBS $PS1_ID $PS1_PATH$PS1_GIT${PS1_SB}]$PS1_
 
 export ASAN_OPTIONS="check_initialization_order=1:detect_stack_use_after_return=1"
 export CLICOLOR_FORCE="1"
+export CMAKE_EXPORT_COMPILE_COMMANDS="ON"
 export CXXFLAGS="-fdiagnostics-color=always"
 export LDFLAGS="-fdiagnostics-color=always"
 export MAKEFLAGS="-j $(($(nproc) + 2)) -O"
