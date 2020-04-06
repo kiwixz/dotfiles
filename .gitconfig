@@ -4,7 +4,7 @@
     cerge = merge --no-ff
     bog = log --graph --pretty='format:%C(auto)%h%d  %s  %C(auto,blue)(%aN, %ar)%Creset'
     bull = !"f() { git fetch origin $1:$1; }; f"
-    up = !"f() { git checkout $1 && git rebase upstream/$1 && git push; }; f"
+    up = !"f() { git checkout $1 && git fetch upstream && git rebase upstream/$1 && git push; }; f"
     pog = log --graph --pretty='format:%C(auto)%h%d  %s  %C(auto,blue)(%aN, %ar)%Creset' --all
 [core]
     autocrlf = input
