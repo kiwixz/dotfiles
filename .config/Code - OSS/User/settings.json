@@ -2,6 +2,8 @@
   "telemetry.enableTelemetry": false,
   "telemetry.enableCrashReporter": false,
 
+  "editor.autoClosingBrackets": "never",
+  "editor.autoClosingQuotes": "never",
   "editor.cursorStyle": "line-thin",
   "editor.fontFamily": "Kiosevka, Consolas, monospace",
   "editor.fontLigatures": true,
