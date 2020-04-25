@@ -41,7 +41,12 @@
   "python.linting.mypyEnabled": true,
   "python.linting.pycodestyleArgs": ["--max-line-length=120"],
   "python.linting.pycodestyleEnabled": true,
-  "python.linting.pylintArgs": ["--disable=invalid-name", "--disable=missing-docstring", "--disable=no-else-return"],
+  "python.linting.pylintArgs": [
+    "--disable=invalid-name",
+    "--disable=missing-docstring",
+    "--disable=no-else-return",
+    "--max-line-length=120"
+  ],
   "python.linting.pylintEnabled": true,
 
   "[json]": {
@@ -49,5 +54,5 @@
   },
   "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
+  }
 }
