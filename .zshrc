@@ -1,8 +1,8 @@
-if [[ -f "/etc/arch-release" ]]; then
+if [ -f "/etc/arch-release" ]; then
     GIT_PROMPT="/usr/share/git/completion/git-prompt.sh"
     CCACHE_BIN_DIR="/usr/lib/ccache/bin"
     PLUGIN_SYNTAX_HIGHLIGHTING="/usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
-elif [[ -f "/etc/debian_version" ]]; then
+elif [ -f "/etc/debian_version" ]; then
     GIT_PROMPT="/usr/lib/git-core/git-sh-prompt"
     CCACHE_BIN_DIR="/usr/lib/ccache"
     PLUGIN_SYNTAX_HIGHLIGHTING="/usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
@@ -11,7 +11,7 @@ else
     return
 fi
 
-setopt CORRECT GLOB_DOTS HIST_IGNORE_DUPS HIST_REDUCE_BLANKS NUMERIC_GLOB_SORT PROMPT_SUBST
+setopt CORRECT EXTENDED_GLOB GLOB_DOTS HIST_IGNORE_DUPS HIST_REDUCE_BLANKS NUMERIC_GLOB_SORT PROMPT_SUBST
 unsetopt FLOW_CONTROL MENU_COMPLETE NOMATCH
 
 HISTFILE="$HOME/.zhistory"
@@ -37,7 +37,7 @@ bindkey "\e[1;5D" backward-word
 bindkey "\e[3;5~" delete-word
 bindkey "^H" backward-delete-word
 
-if [[ ${+terminfo[smkx]} && ${+terminfo[rmkx]} ]]; then
+if [ ${+terminfo[smkx]} -a ${+terminfo[rmkx]} ]; then
     function zle-line-init () { echoti smkx }
     function zle-line-finish () { echoti rmkx }
     zle -N zle-line-init
@@ -55,7 +55,7 @@ zstyle ':completion:*:approximate:*' max-errors 3 numeric
 zstyle ':completion:*:match:*' original only
 
 
-if [[ -f "$GIT_PROMPT" ]]; then
+if [ -f "$GIT_PROMPT" ]; then
     GIT_PS1_SHOWDIRTYSTATE=1
     GIT_PS1_SHOWSTASHSTATE=1
     GIT_PS1_SHOWUNTRACKEDFILES=1
@@ -125,8 +125,11 @@ title() {
 }
 
 
-if [[ -f "$PLUGIN_SYNTAX_HIGHLIGHTING" ]]; then
-    source "$PLUGIN_SYNTAX_HIGHLIGHTING"
-fi
-
 title "$USERNAME@$HOST"
+
+[ -f "$PLUGIN_SYNTAX_HIGHLIGHTING" ] && source "$PLUGIN_SYNTAX_HIGHLIGHTING"
+
+
+for rc in $HOME/.zshrc.d/*(#qN); do
+    source $rc
+done
