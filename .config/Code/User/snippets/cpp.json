@@ -1,0 +1,12 @@
+{
+  "dump": {
+    "prefix": "dump",
+    "body": [
+      "#define STRINGIFY_(a) #a",
+      "#define STRINGIFY(a) STRINGIFY_(a)",
+      "#define D(a) (std::cerr << STRINGIFY(a) \" = \" << (a) << \"\\n\")",
+      "",
+      "D($0);"
+    ]
+  }
+}
