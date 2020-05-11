@@ -3,6 +3,7 @@
         "deitry.apt-source-list-syntax",
         "bungcip.better-toml",
         "twxs.cmake",
+        "usernamehw.errorlens",
         "eamodio.gitlens",
         "wholroyd.jinja",
         "esbenp.prettier-vscode",

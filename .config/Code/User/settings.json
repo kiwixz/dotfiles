@@ -18,6 +18,7 @@
   "workbench.startupEditor": "newUntitledFile",
 
   "clangd.arguments": ["--header-insertion=never"],
+  "errorLens.addNumberOfDiagnostics": true,
   "gitlens.codeLens.enabled": false,
   "gitlens.currentLine.enabled": false,
   "prettier.printWidth": 120,
