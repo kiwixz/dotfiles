@@ -18,6 +18,7 @@
   "workbench.startupEditor": "newUntitledFile",
 
   "clangd.arguments": ["--header-insertion=never"],
+  "clangd.fallbackFlags": ["-std=c++17", "-Wall", "-Wextra"],
   "errorLens.addNumberOfDiagnostics": true,
   "gitlens.codeLens.enabled": false,
   "gitlens.currentLine.enabled": false,
