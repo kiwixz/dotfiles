@@ -9,6 +9,8 @@
 [core]
     autocrlf = input
     editor = nano
+[diff]
+    algorithm = histogram
 [fetch]
     prune = true
 [mergetool]
