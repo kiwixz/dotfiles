@@ -11,6 +11,7 @@ else
     return
 fi
 
+
 setopt CORRECT EXTENDED_GLOB GLOB_DOTS HIST_IGNORE_DUPS HIST_REDUCE_BLANKS NUMERIC_GLOB_SORT PROMPT_SUBST
 unsetopt FLOW_CONTROL MENU_COMPLETE NOMATCH
 
@@ -120,6 +121,12 @@ mkcd() {
     cd "$*"
 }
 
+source_existing() {
+    for file in "$@"; do
+        [ -f "$file" ] && source "$file"
+    done
+}
+
 title() {
     printf "\e];%s\a" "$*"
 }
@@ -127,7 +134,7 @@ title() {
 
 title "$USERNAME@$HOST"
 
-[ -f "$PLUGIN_SYNTAX_HIGHLIGHTING" ] && source "$PLUGIN_SYNTAX_HIGHLIGHTING"
+source_existing "$PLUGIN_SYNTAX_HIGHLIGHTING"
 
 
 for rc in $HOME/.zshrc.d/*(#qN); do
