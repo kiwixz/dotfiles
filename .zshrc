@@ -53,6 +53,7 @@ zstyle ':completion:*' matcher-list "" "m:{a-zA-Z}={A-Za-z}"
 zstyle ':completion:*' menu select
 zstyle ':completion:*' use-cache true
 zstyle ':completion:*:approximate:*' max-errors 3 numeric
+zstyle ':completion:*:complete:*' gain-privileges true
 zstyle ':completion:*:match:*' original only
 
 
@@ -96,25 +97,40 @@ export LESS_TERMCAP_us=$'\e[1;32m'
 export LESS_TERMCAP_ue=$'\e[0m'
 
 
-alias -g G='|grep'
+alias -g G='| grep'
+alias -g GG='|& grep'
 alias -g Q='>/dev/null'
 alias -g Q2='2>/dev/null'
 alias -g QQ='>/dev/null 2>/dev/null'
 
+alias ctest="ctest --output-on-failure"
 alias diff="diff --color=auto"
 alias grep="grep --color=auto"
 alias ls="ls --color=auto --group-directories-first"
 alias pacman="pacman --color=auto"
 alias sudo="sudo "
 
-alias cmake="cmake -G Ninja"
-alias ctest="ctest --output-on-failure"
-
+alias cmakeb="cmake -G Ninja -S . -B build"
 alias dockrun="docker run -it --rm"
 alias gdbrq='gdb -ex "set confirm on" -ex "r" -ex "q" -args'
 alias lldbrq='lldb -o r -o "script lldb.frame or os._exit(0)" --'
+alias ninjab="ninja -C build"
 alias ytdl='youtube-dl -f "bestvideo+bestaudio" --all-subs --convert-subs "srt" --embed-subs --sub-format "srt"'
 
+
+docklog() {
+    while docker logs -f --tail 100 "$@"; do; done
+}
+
+git_upstream_origin() {
+    git remote rename "origin" "upstream"
+    git remote add -f "origin" "$*"
+}
+
+git_remove_tags() {
+    git tag | xargs git push -d "origin"
+    git tag | xargs git tag -d
+}
 
 mkcd() {
     mkdir -p "$*"
