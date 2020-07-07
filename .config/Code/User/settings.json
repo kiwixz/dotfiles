@@ -23,23 +23,9 @@
   "gitlens.codeLens.enabled": false,
   "gitlens.currentLine.enabled": false,
   "prettier.printWidth": 120,
+  "pyright.disableLanguageServices": true,
   "python.formatting.blackArgs": ["--line-length=120"],
   "python.formatting.provider": "black",
-  "python.linting.mypyArgs": [
-    "--allow-untyped-globals",
-    "--cache-dir=/dev/null",
-    "--check-untyped-defs",
-    "--ignore-missing-imports",
-    "--follow-imports=silent",
-    "--show-column-numbers",
-    "--show-error-codes",
-    "--strict-equality",
-    "--warn-redundant-casts",
-    "--warn-return-any",
-    "--warn-unreachable",
-    "--warn-unused-ignores"
-  ],
-  "python.linting.mypyEnabled": true,
   "python.linting.pycodestyleArgs": ["--max-line-length=120"],
   "python.linting.pycodestyleEnabled": true,
   "python.linting.pylintArgs": [
@@ -49,6 +35,7 @@
     "--max-line-length=120"
   ],
   "python.linting.pylintEnabled": true,
+  "python.showStartPage": false,
   "workbench.iconTheme": "material-icon-theme",
 
   "[json]": {
