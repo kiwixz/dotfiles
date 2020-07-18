@@ -15,7 +15,6 @@
       "problemMatcher": [
         {
           "owner": "cpp",
-          "applyTo": "closedDocuments",
           "fileLocation": ["autoDetect", "${workspaceFolder}/build"],
           "pattern": [
             {
@@ -62,6 +61,21 @@
           ]
         }
       ]
+    },
+    {
+      "label": "ctest",
+      "group": {
+        "kind": "test",
+        "isDefault": true
+      },
+      "dependsOn": "ninja",
+      "type": "process",
+      "command": "ctest",
+      "args": ["--output-on-failure"],
+      "options": {
+        "cwd": "${workspaceFolder}/build"
+      },
+      "problemMatcher": []
     }
   ]
 }
