@@ -26,12 +26,11 @@
   "pyright.disableLanguageServices": true,
   "python.formatting.blackArgs": ["--line-length=120"],
   "python.formatting.provider": "black",
-  "python.linting.pycodestyleArgs": ["--max-line-length=120"],
-  "python.linting.pycodestyleEnabled": true,
   "python.linting.pylintArgs": [
     "--disable=invalid-name",
     "--disable=missing-docstring",
     "--disable=no-else-return",
+    "--unsafe-load-any-extension=y",
     "--max-line-length=120"
   ],
   "python.linting.pylintEnabled": true,
