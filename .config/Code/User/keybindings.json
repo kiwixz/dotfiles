@@ -1,12 +1,53 @@
 [
   {
+    "key": "ctrl+alt+left",
+    "command": "cursorWordPartLeft"
+  },
+  {
+    "key": "ctrl+shift+alt+left",
+    "command": "cursorWordPartLeftSelect"
+  },
+  {
+    "key": "ctrl+alt+right",
+    "command": "cursorWordPartRight"
+  },
+  {
+    "key": "ctrl+shift+alt+right",
+    "command": "cursorWordPartRightSelect"
+  },
+  {
+    "key": "ctrl+alt+backspace",
+    "command": "deleteWordPartLeft",
+    "when": "textInputFocus && !editorReadonly"
+  },
+
+  {
+    "key": "ctrl+shift+w",
+    "command": "-workbench.action.closeWindow"
+  },
+  {
+    "key": "ctrl+shift+w",
+    "command": "workbench.action.reopenClosedEditor"
+  },
+  {
+    "key": "ctrl+shift+t",
+    "command": "-workbench.action.reopenClosedEditor"
+  },
+
+  {
     "key": "ctrl+d",
     "command": "-editor.action.copyLinesDownAction"
   },
   {
+    "key": "ctrl+alt+b",
+    "command": "workbench.files.action.showActiveFileInExplorer"
+  },
+
+  {
     "key": "ctrl+[Backquote]",
     "command": "workbench.action.terminal.focus"
   },
+
   {
     "key": "alt+left",
     "command": "workbench.action.navigateBack"
@@ -98,5 +139,5 @@
     "key": "ctrl+shift+down",
     "command": "-editor.action.insertCursorBelow",
     "when": "editorTextFocus"
-  }
+  },
 ]
