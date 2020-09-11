@@ -17,7 +17,7 @@
   "workbench.editor.enablePreview": false,
   "workbench.startupEditor": "newUntitledFile",
 
-  "clangd.arguments": ["--header-insertion=never", "--clang-tidy=false"],
+  "clangd.arguments": ["--header-insertion=never"],
   "clangd.fallbackFlags": ["-std=c++17", "-Wall", "-Wextra"],
   "errorLens.addNumberOfDiagnostics": true,
   "git.confirmSync": false,
@@ -26,6 +26,11 @@
   "gitlens.currentLine.enabled": false,
   "prettier.printWidth": 120,
   "pyright.disableLanguageServices": true,
+  "python.analysis.memory.keepLibraryAst": true,
+  "python.analysis.memory.keepLibraryLocalVariables": true,
+  "python.analysis.typeCheckingMode": "basic",
+  "python.analysis.useLibraryCodeForTypes": true,
+  "python.experiments.enabled": false,
   "python.formatting.blackArgs": ["--line-length=120"],
   "python.formatting.provider": "black",
   "python.linting.pylintArgs": [
@@ -36,6 +41,7 @@
     "--max-line-length=120"
   ],
   "python.linting.pylintEnabled": true,
+  "python.linting.pylintUseMinimalCheckers": false,
   "python.showStartPage": false,
   "workbench.iconTheme": "material-icon-theme",
 
@@ -44,5 +50,5 @@
   },
   "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+  },
 }
