@@ -3,16 +3,21 @@
 [alias]
     cerge = merge --no-ff
     bog = log --graph --pretty='format:%C(auto)%h%d  %s  %C(auto,blue)(%aN, %ar)%Creset'
-    bull = !"f() { git fetch origin $1:$1; }; f"
     up = !"f() { git checkout $1 && git fetch upstream && git rebase upstream/$1 && git push; }; f"
     pog = log --graph --pretty='format:%C(auto)%h%d  %s  %C(auto,blue)(%aN, %ar)%Creset' --all
+[blame]
+    coloring = repeatedLines
+    date = format-local:%F %R
 [core]
     autocrlf = input
     editor = nano
 [diff]
     algorithm = histogram
+    colorMoved = zebra
 [fetch]
     prune = true
+[merge]
+    ff = false
 [mergetool]
     keepBackup = false
 [pull]
