@@ -18,7 +18,8 @@
   "workbench.startupEditor": "newUntitledFile",
 
   "clangd.arguments": ["--header-insertion=never"],
-  "clangd.fallbackFlags": ["-std=c++17", "-Wall", "-Wextra"],
+  "clangd.fallbackFlags": ["-std=c++20", "-Wall", "-Wextra"],
+  "clangd.onConfigChanged": "restart",
   "errorLens.addNumberOfDiagnostics": true,
   "git.confirmSync": false,
   "git.enableSmartCommit": true,
@@ -27,7 +28,6 @@
   "prettier.printWidth": 120,
   "pyright.disableLanguageServices": true,
   "python.analysis.memory.keepLibraryAst": true,
-  "python.analysis.memory.keepLibraryLocalVariables": true,
   "python.analysis.typeCheckingMode": "basic",
   "python.analysis.useLibraryCodeForTypes": true,
   "python.experiments.enabled": false,
