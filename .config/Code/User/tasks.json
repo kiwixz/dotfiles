@@ -18,7 +18,7 @@
           "fileLocation": ["autoDetect", "${workspaceFolder}/build"],
           "pattern": [
             {
-              "regexp": "^(.*):(\\d+):(\\d+): (warning|error|fatal error): (.*)$",
+              "regexp": "^(.*):(\\d+):(\\d+): (note|warning|error|fatal error): (.*)$",
               "file": 1,
               "line": 2,
               "column": 3,
