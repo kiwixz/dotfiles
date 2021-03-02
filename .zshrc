@@ -6,6 +6,10 @@ elif [ -f "/etc/debian_version" ]; then
     GIT_PROMPT="/usr/lib/git-core/git-sh-prompt"
     CCACHE_BIN_DIR="/usr/lib/ccache"
     PLUGIN_SYNTAX_HIGHLIGHTING="/usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+elif [ -f "/etc/fedora-release" ]; then
+    GIT_PROMPT="/usr/share/git-core/contrib/completion/git-prompt.sh"
+    CCACHE_BIN_DIR="/usr/lib64/ccache"
+    PLUGIN_SYNTAX_HIGHLIGHTING="/usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 else
     echo -e "\e[1;31m$0: could not detect operating system\e[0m" >&2
     return
