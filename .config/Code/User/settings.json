@@ -80,6 +80,12 @@
   "editor.tokenColorCustomizations": {
     "textMateRules": [
       {
+        "scope": "comment",
+        "settings": {
+          "foreground": "#584"
+        }
+      },
+      {
         "scope": "constant.language",
         "settings": {
           "foreground": "#a50"
@@ -89,6 +95,12 @@
         "scope": "constant.numeric",
         "settings": {
           "foreground": "#c86"
+        }
+      },
+      {
+        "scope": "entity.name.operator",
+        "settings": {
+          "foreground": "#eea"
         }
       },
       {
@@ -122,15 +134,33 @@
         }
       },
       {
-        "scope": "keyboard.operator",
+        "scope": "keyword.other.operator",
         "settings": {
-          "foreground": "#fff"
+          "foreground": "#0ac"
         }
       },
       {
         "scope": "keyword.other.unit",
         "settings": {
           "foreground": "#a50"
+        }
+      },
+      {
+        "scope": "keyword.other.static_assert",
+        "settings": {
+          "foreground": "#909592"
+        }
+      },
+      {
+        "scope": "keyword.operator",
+        "settings": {
+          "foreground": "#fff"
+        }
+      },
+      {
+        "scope": "keyword.operator.cast",
+        "settings": {
+          "foreground": "#0ac"
         }
       },
       {
@@ -148,13 +178,19 @@
       {
         "scope": "storage.modifier",
         "settings": {
+          "foreground": "#0ac"
+        }
+      },
+      {
+        "scope": "storage.modifier.pointer",
+        "settings": {
           "foreground": "#fff"
         }
       },
       {
-        "scope": "storage.modifier.specifier",
+        "scope": "storage.modifier.reference",
         "settings": {
-          "foreground": "#0ac"
+          "foreground": "#fff"
         }
       },
       {
@@ -176,9 +212,27 @@
         }
       },
       {
+        "scope": "storage.type.decltype",
+        "settings": {
+          "foreground": "#0f6"
+        }
+      },
+      {
         "scope": "storage.type.template",
         "settings": {
           "foreground": "#56f"
+        }
+      },
+      {
+        "scope": "variable.language",
+        "settings": {
+          "foreground": "#a00"
+        }
+      },
+      {
+        "scope": "variable.other.enummember",
+        "settings": {
+          "foreground": "#adf"
         }
       }
     ]
@@ -186,11 +240,15 @@
   "editor.semanticTokenColorCustomizations": {
     "rules": {
       "class": "#0fc",
+      "comment": "#695",
       "enum": "#5cb",
+      "enumConstant": "#c86",
+      "enumMember": "#c86",
       "function": "#eea",
       "macro": "#a4f",
       "namespace": "#acb",
       "parameter": "#adf",
+      "type": "#56f",
       "typeParameter": "#0f6",
       "variable": "#adf"
     }
