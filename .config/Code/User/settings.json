@@ -14,6 +14,7 @@
   "explorer.autoReveal": false,
   "files.eol": "\n",
   "window.openFilesInNewWindow": "default",
+  "window.titleBarStyle": "custom",
   "workbench.editor.enablePreview": false,
   "workbench.startupEditor": "newUntitledFile",
 
