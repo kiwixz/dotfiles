@@ -106,24 +106,28 @@ alias -g GG='|& grep'
 alias -g Q='>/dev/null'
 alias -g Q2='2>/dev/null'
 alias -g QQ='>/dev/null 2>/dev/null'
+alias -g T='|tee'
 
 alias ctest="ctest --output-on-failure"
 alias diff="diff --color=auto"
 alias grep="grep --color=auto"
+alias ip="ip -c"
 alias ls="ls --color=auto --group-directories-first"
 alias pacman="pacman --color=auto"
 alias sudo="sudo "
 
-alias cmakeb="cmake -G Ninja -S . -B build"
+alias clip="xclip -selection c"
+alias cmakeb="cmake -G Ninja -B build"
 alias dockrun="docker run -it --rm"
 alias gdbrq='gdb -ex "set confirm on" -ex "r" -ex "q" -args'
 alias lldbrq='lldb -o r -o "script lldb.frame or os._exit(0)" --'
 alias ninjab="ninja -C build"
+alias recache="CCACHE_RECACHE=1 "
 alias ytdl='youtube-dl -f "bestvideo+bestaudio" --all-subs --convert-subs "srt" --embed-subs --sub-format "srt"'
 
 
 docklog() {
-    while docker logs -f --tail 100 "$@"; do; done
+    while docker logs -f --tail 0 "$@"; do; done
 }
 
 git_upstream_origin() {
