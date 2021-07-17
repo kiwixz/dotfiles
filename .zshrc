@@ -123,7 +123,7 @@ alias gdbrq='gdb -ex "set confirm on" -ex "r" -ex "q" -args'
 alias lldbrq='lldb -o r -o "script lldb.frame or os._exit(0)" --'
 alias ninjab="ninja -C build"
 alias recache="CCACHE_RECACHE=1 "
-alias ytdl='youtube-dl -f "bestvideo+bestaudio" --all-subs --convert-subs "srt" --embed-subs --sub-format "srt"'
+alias ytdl='youtube-dl -f "bestvideo+bestaudio/best" --all-subs --convert-subs "srt" --embed-subs --sub-format "srt"'
 
 
 docklog() {
